@@ -1,0 +1,29 @@
+/* Navbar.css */
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  background-color: #ff7b9c; /* ou toute autre couleur de fond de votre choix */
+  height: 95px; /* Augmentez la hauteur comme vous le souhaitez */
+
+  border-radius: 0 0 15px 15px; /* Bordures arrondies en bas */
+  top: 0; /* Positionner en haut de la page */
+  left: 0; /* Aligner à gauche */
+  right: 0; /* Aligner à droite */
+  position: fixed; /* Fixer la position */
+  z-index: 1000; /* S'assurer que la navbar est au-dessus des autres éléments */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optionnel: ajouter de l'ombre pour un effet de profondeur */
+  overflow: hidden; 
+  display: flex;
+}
+
+.brand-container .brand-logo {
+  height: 40px; /* Ajustez la taille de l'image de marque si nécessaire */
+  margin-left: 20px;
+}
+
+.login-container .login-logo {
+  height: 90px; /* Ajustez la taille du logo de connexion si nécessaire */
+  max-width: 200px;
+}

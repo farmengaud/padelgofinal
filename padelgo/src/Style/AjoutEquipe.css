@@ -1,0 +1,80 @@
+/* Styles globaux */
+.all {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fdfff9;
+}
+
+/* Styles du conteneur du formulaire */
+.form-containerr {
+    width: 90%; /* Adapter à la largeur souhaitée */
+    max-width: 400px; /* Limiter la largeur maximale */
+    margin: auto; /* Centrage horizontal */
+    padding: 2rem;
+    text-align: center;
+    display: flex; /* Utiliser Flexbox */
+    flex-direction: column; /* Organiser les enfants verticalement */
+    margin-top: 100px;
+    gap: 20px; /* Espacer les éléments verticalement */
+    box-sizing: border-box; /* Inclure padding dans la largeur */
+    background: #ffffff; /* Fond blanc */
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+/* Styles des titres */
+.form-containerr h2 {
+    color: #FF7B9C;
+    margin-bottom: 1.5rem;
+}
+
+/* Styles des champs de saisie */
+.form-containerr input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #537A5A;
+    border-radius: 10px;
+}
+
+/* Styles des boutons */
+.form-containerr button {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #FF7B9C;
+    color: #fdfff9;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px; /* Espacer les boutons */
+}
+
+.form-containerr button:hover {
+    background-color: #FF7B9C;
+}
+
+.form-containerr button:active {
+    background-color: #FF7B9C;
+    opacity: 0.8;
+}
+
+/* Styles du message de succès */
+.success-message {
+    color: green;
+   
+}
+
+/* Styles du message d'erreur */
+.error-message {
+    color: red;
+    background-color: #fff3f3;
+    border: 1px solid red;
+    padding: 10px;
+    
+    border-radius: 5px;
+    text-align: center;
+}

@@ -1,0 +1,22 @@
+.accueil-admin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 50px); /* 50px est la hauteur de votre Navbar, ajustez-la selon votre mise en page */
+}
+
+.nouveau-tournoi-btn {
+    background-color: #FF7B9C; /* Couleur rose de votre choix */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.nouveau-tournoi-btn:hover {
+    background-color: #e66a85; /* Une teinte plus foncée pour l'effet au survol */
+}

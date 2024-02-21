@@ -1,0 +1,65 @@
+@startuml
+
+class Utilisateur {
+    +int UtilisateurId
+    +String Nom
+    +String Prenom
+    +String Mail
+    +String MotDePasse
+}
+
+class Joueur {
+    +int JoueurId
+    +String Nom
+    +String Prenom
+    +String Mail
+    +String NumeroLicence
+    +int Classement
+}
+
+class Administrateur {
+    +int AdministrateurId
+    +String Nom
+    +String Prenom
+    +String Mail
+}
+
+class Club {
+    +int ClubId
+    +String Region
+    +String Ville
+    +String Nom
+    -List<Tournoi> Tournois
+}
+
+class Equipe {
+    +int EquipeId
+    +String NomJoueur1
+    +String NomJoueur2
+    +int PoidsEquipe
+}
+
+class Tournoi {
+    +int TournoiId
+    +String Categorie
+    +String Niveau
+    +int NombreEquipe
+    -List<Equipe> Equipes
+}
+
+class Inscription {
+    +int InscriptionId
+    +Joueur Joueur
+    +Tournoi Tournoi
+    +DateTime DateInscription
+    +bool EstConfirmee
+}
+
+Utilisateur <|-- Joueur
+Utilisateur <|-- Administrateur
+Club --> "0..*" Tournoi : organise
+Tournoi --> "0..*" Equipe : inclut
+Joueur --> "0..*" Inscription : participe
+Inscription --> Tournoi
+
+@enduml

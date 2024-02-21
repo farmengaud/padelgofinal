@@ -1,0 +1,127 @@
+/* Styles globaux */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* ou la police de votre choix */
+    justify-content: center;
+    align-items: center;
+    background-color: #fdfff9; /* couleur de fond légère */
+   
+}
+
+/* Inscription.css */
+
+.marque-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px; /* Ajustez selon votre design */
+}
+
+.marque-container img {
+    max-width: 250px;
+}
+/* Styles du conteneur du formulaire */
+.form-container {
+
+    max-width: 400px;
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+    
+}
+
+
+/* Styles des titres */
+.form-container h2 {
+    color: #FF7B9C; /* couleur foncée pour le texte */
+    margin-bottom: 1.5rem;
+    margin-top: 50px;
+}
+
+/* Styles des champs de saisie */
+.form-container input {
+    max-width: 300px; /* Remplacez 200px par la largeur souhaitée */
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #537A5A;
+    border-radius: 10px;
+}
+
+
+/* Styles des boutons */
+/* Styles des boutons */
+.form-container button {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #FF7B9C; /* Couleur principale rose */
+    color: #fdfff9; /* Couleur du texte */
+    font-size: 1rem;
+    cursor: pointer;
+    /*transition: background-color 0.3s ease; /* Animation douce pour le changement de couleur */
+}
+
+.form-container button:hover {
+    background-color: #FF7B9C;
+}
+.form-container button:active { /* Ajouter :active ici pour le même style lors du clic */
+    background-color: #FF7B9C; /* Conserver la même couleur rose au survol et au clic */
+    opacity: 0.8; /* Légèrement transparent lors du clic */
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    margin-top: 20px; /* Ajouter un peu d'espace en haut */
+}
+
+
+
+/* Styles des paragraphes et des liens */
+.form-container p {
+    margin-top: 1.5rem;
+}
+
+.form-container a {
+    color: #FF7B9C; /* couleur secondaire de votre logo */
+    text-decoration: none;
+}
+
+.form-container a:hover {
+    text-decoration: underline;
+}
+/* Styles du conteneur du logo */
+.logo-container {
+    display: flex;
+    justify-content: center; /* Centrer le logo horizontalement */
+    align-items: center; /* Centrer le logo verticalement */
+    margin-top: 20px; /* Ajouter un peu d'espace en haut */
+    margin-bottom: 20px; /* Ajouter un peu d'espace en bas */
+}
+
+/* Styles de l'image du logo */
+.logo-container img {
+    max-width: 200px; /* Limiter la largeur maximale du logo */
+    height: auto; /* Garder le ratio de l'image */
+    margin-top: 50px;
+}
+
+.error {
+    color: red; /* Couleur du texte de l'erreur */
+    margin-bottom: 1rem; /* Espacement avant le prochain élément */
+}
+/* Dans votre fichier CSS */
+.error-message {
+    color: red; /* Choisir la couleur que vous voulez pour le message d'erreur */
+    background-color: #fff3f3; /* Un fond léger rouge pour attirer l'attention */
+    border: 1px solid red; /* Une bordure pour mettre l'accent sur le message */
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px; /* Pour des coins arrondis */
+    text-align: center;
+}
+
+
