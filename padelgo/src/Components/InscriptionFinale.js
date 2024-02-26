@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import Navbar from './Navbar';
 import Tapbar from './Tapbar';
-import '../Style/InscriptionTournoi.css';
+import '../Style/InscriptionFinale.css';
 
 function InscriptionTournoi() {
   const [tournoiId, setTournoiId] = useState('');
@@ -57,7 +57,7 @@ function InscriptionTournoi() {
             <div className="button-group">
               <button className="submit-button" type="submit">Inscrire l'équipe</button>
             </div>
-            {message && <p className="error-message">{message}</p>}
+            {message && <p className="valid-message">{message}</p>}
           </form>
         </div>
       </div>

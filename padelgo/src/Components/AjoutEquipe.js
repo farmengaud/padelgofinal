@@ -115,6 +115,9 @@ function Insc() {
                 
                 <Tapbar />
             </div>
+            <div className="footerr">
+                <p>Retrouvez votre classement mis à jour tous les premiers mardi du mois sur <a href="https://tenup.fft.fr/">tenup.fft.fr</a>.</p>
+            </div>
         </div>
         </>
     );

@@ -10,6 +10,8 @@ import InscriptionTournoi from './Components/InscriptionTournoi';
 import CreationTournoi from './Components/CreationTournoi';
 import AccueilAdmin from './Components/AccueilAdmin';
 import InscriptionFinale from './Components/InscriptionFinale';
+import AfficherEquipesTournoi from './Components/AfficherEquipesTournoi';
+import UpdateClassement from './Components/UpdateClassement';
 
 function App() {
     return (
@@ -25,6 +27,8 @@ function App() {
                 <Route path="/accueiladmin" element={<AccueilAdmin/>} />
                 <Route path="/inscriptiontournoi" element={<InscriptionTournoi />} />
                 <Route path="/inscriptionfinale" element={<InscriptionFinale />} />
+                <Route path="/afficherequipestournoi" element={<AfficherEquipesTournoi />} />
+                <Route path="/updateclassement" element={<UpdateClassement />} />
             </Routes>
         </Router>
     );

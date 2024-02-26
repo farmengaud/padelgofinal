@@ -1,0 +1,36 @@
+
+
+/* Conteneur principal pour le formulaire et la liste des équipes */
+.form-container4 {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    margin-top: 80px;
+}
+
+/* Style pour le formulaire de recherche */
+.form-container4 form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-container4 input, .form-container4 button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form-container4 button {
+    background-color: #FF7B9C;
+    color: white;
+    cursor: pointer;
+}
+
+.form-container4 button:hover {
+    background-color: #e6678a;
+}
+

@@ -2,11 +2,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 50px); /* 50px est la hauteur de votre Navbar, ajustez-la selon votre mise en page */
+    height: calc(100vh - 50px);
+    flex-direction: column; 
 }
 
-.nouveau-tournoi-btn {
-    background-color: #FF7B9C; /* Couleur rose de votre choix */
+.nouveau-tournoi-btn, .afficher-equipes-btn, .update-classement-btn {
+    background-color: #FF7B9C; 
     color: white;
     border: none;
     border-radius: 10px;
@@ -15,8 +16,9 @@
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease;
+    width: 80%; /* Vous pouvez ajuster la largeur selon vos besoins */
+    margin: 10px 0; /* Ajouter une marge en haut et en bas pour espacer les boutons */
 }
-
 .nouveau-tournoi-btn:hover {
     background-color: #e66a85; /* Une teinte plus foncée pour l'effet au survol */
 }

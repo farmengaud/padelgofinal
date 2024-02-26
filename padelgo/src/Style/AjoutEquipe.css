@@ -78,3 +78,20 @@
     border-radius: 5px;
     text-align: center;
 }
+
+
+.footerr {
+    position: fixed;
+    width: 100%;
+    /*background-color: #33339f; */
+    color: black; /* Couleur du texte */
+    text-align: center;
+    padding: 10px; /* Ajustez selon vos besoins */
+    font-size: 14px; /* Taille du texte */
+    margin-top: 800px;
+    margin-bottom: 10px;
+}
+
+
+
+
