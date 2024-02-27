@@ -17,7 +17,9 @@ function AfficherEquipesTournoi() {
         }
         try {
             const response = await axios.get(`http://localhost:5002/api/tournoi/${tournoiId}/equipes`);
-            setEquipes(response.data);
+            // Tri des équipes par poids (somme des classements) avant de les définir dans l'état
+            const equipesTrie = response.data.sort((a, b) => (a.classementJoueur1 + a.classementJoueur2) - (b.classementJoueur1 + b.classementJoueur2));
+            setEquipes(equipesTrie);
         } catch (error) {
             setErreur('Erreur lors de la récupération des équipes. Assurez-vous que l\'ID du tournoi est correct.');
             console.error(error);
@@ -47,7 +49,8 @@ function AfficherEquipesTournoi() {
                                 <li key={equipe.equipeId}>
                                     <strong>ID de l'équipe:</strong> {equipe.equipeId} <br/>
                                     <strong>Nom Joueur 1:</strong> {equipe.nomJoueur1}, <strong>Classement:</strong> {equipe.classementJoueur1}, <strong>Mail:</strong> {equipe.mailJoueur1}<br/>
-                                    <strong>Nom Joueur 2:</strong> {equipe.nomJoueur2}, <strong>Classement:</strong> {equipe.classementJoueur2}, <strong>Mail:</strong> {equipe.mailJoueur2}
+                                    <strong>Nom Joueur 2:</strong> {equipe.nomJoueur2}, <strong>Classement:</strong> {equipe.classementJoueur2}, <strong>Mail:</strong> {equipe.mailJoueur2}<br/>
+                                    <strong>Poids de l'équipe:</strong> {equipe.classementJoueur1 + equipe.classementJoueur2}
                                 </li>
                             ))}
                         </ul>

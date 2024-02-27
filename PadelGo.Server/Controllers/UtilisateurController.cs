@@ -80,21 +80,29 @@ public IActionResult PostConnexion([FromBody] UtilisateurconnexionDTOpost utilis
         return BadRequest("Les données de connexion sont requises.");
     }
 
-    // Trouver l'utilisateur par mail
+    // Trouver l'utilisateur par email
     var utilisateur = _context.Utilisateurs.FirstOrDefault(u => u.Mail == utilisateurDTO.Mail);
     
     // Vérifier le mot de passe si l'utilisateur est trouvé
-    bool motDePasseValide = utilisateur != null && BCrypt.Net.BCrypt.Verify(utilisateurDTO.MotDePasse, utilisateur.MotDePasse);
-
-    if (!motDePasseValide)
+    if (utilisateur != null && BCrypt.Net.BCrypt.Verify(utilisateurDTO.MotDePasse, utilisateur.MotDePasse))
     {
-        // Retourner un message d'erreur générique
-        return Unauthorized("L’e-mail ou le mot de passe ne correspond pas ");
-    }
+        // Si l'authentification est réussie, retourner les informations utilisateur
+        var userInfo = new
+        {
+            Nom = utilisateur.Nom,
+            Prenom = utilisateur.Prenom,
+            Email = utilisateur.Mail // Assurez-vous que c'est le bon champ pour l'email dans votre base de données
+        };
 
-    // Si tout est correct, retourner une réponse de succès (vous pourriez vouloir retourner un token ou des infos utilisateur ici)
-    return Ok( "Connexion réussie." );
+        return Ok(userInfo); // Retourne les informations de l'utilisateur
+    }
+    else
+    {
+        // Si l'authentification échoue, retourner une erreur générique
+        return Unauthorized("L’e-mail ou le mot de passe ne correspond pas.");
+    }
 }
+
 
 [HttpGet("getNomPrenomParEmail")]
         public ActionResult GetNomPrenomParEmail([FromQuery] string email)
@@ -116,6 +124,7 @@ public IActionResult PostConnexion([FromBody] UtilisateurconnexionDTOpost utilis
 
             return Ok(utilisateur);
         }
+
         [HttpPut("updateClassement")]
 public IActionResult UpdateClassement([FromBody] UtilisateurDTOput utilisateurDTO)
 {

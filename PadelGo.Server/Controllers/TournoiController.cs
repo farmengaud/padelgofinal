@@ -57,15 +57,16 @@ namespace PadelGo.Controllers
         }
         // GET: api/tournoi
 [HttpGet]
-public async Task<ActionResult<IEnumerable<TournoiDTOpost>>> GetAllTournois()
+public async Task<ActionResult<IEnumerable<TournoiDTOGet>>> GetAllTournois()
 {
     var tournois = await _context.Tournois
-        .Select(t => new TournoiDTOpost 
+        .Select(t => new TournoiDTOGet 
         { 
             Categorie = t.Categorie, 
             Niveau = t.Niveau, 
             Date = t.Date, 
-            NombreEquipe = t.NombreEquipe 
+            NombreEquipe = t.NombreEquipe,
+            TournoiId=t.TournoiId 
         })
         .ToListAsync();
         

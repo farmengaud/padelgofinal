@@ -32,6 +32,7 @@ function Tournoi() {
                         <h3>{tournoi.categorie}</h3>
                         <h2>{tournoi.niveau}</h2>
                         <h2>{tournoi.nombreEquipe} équipe{tournoi.nombreEquipe > 1 ? 's' : ''}</h2>
+                        <h2> id tournoi: {tournoi.tournoiId}</h2>
 
                         <p>{new Date(tournoi.date).toLocaleDateString()}</p>
                         {/* Ajoutez plus d'informations si nécessaire */}
