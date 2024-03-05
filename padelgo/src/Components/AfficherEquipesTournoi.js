@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Navbar from './NavbarAdmin';
+import { useNavigate } from 'react-router-dom';
 import '../Style/AfficherEquipes.css'; 
 
 function AfficherEquipesTournoi() {
     const [tournoiId, setTournoiId] = useState('');
     const [equipes, setEquipes] = useState([]);
     const [erreur, setErreur] = useState('');
+    const navigate = useNavigate();
 
     const handleRecherche = async (e) => {
         e.preventDefault();
@@ -24,6 +26,9 @@ function AfficherEquipesTournoi() {
             setErreur('Erreur lors de la récupération des équipes. Assurez-vous que l\'ID du tournoi est correct.');
             console.error(error);
         }
+    };
+    const handleBackToAdmin = () => {
+        navigate('/accueiladmin');
     };
 
     return (
@@ -56,6 +61,7 @@ function AfficherEquipesTournoi() {
                         </ul>
                     </div>
                 )}
+                <button className="back-to-admin-button" onClick={handleBackToAdmin}>Retour</button>
             </div>
         </>
     );

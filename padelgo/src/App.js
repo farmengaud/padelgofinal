@@ -12,6 +12,10 @@ import AccueilAdmin from './Components/AccueilAdmin';
 import InscriptionFinale from './Components/InscriptionFinale';
 import AfficherEquipesTournoi from './Components/AfficherEquipesTournoi';
 import UpdateClassement from './Components/UpdateClassement';
+import SuppressionTournoi from './Components/SuppressionTournoi';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 
 function App() {
     return (
@@ -29,6 +33,7 @@ function App() {
                 <Route path="/inscriptionfinale" element={<InscriptionFinale />} />
                 <Route path="/afficherequipestournoi" element={<AfficherEquipesTournoi />} />
                 <Route path="/updateclassement" element={<UpdateClassement />} />
+                <Route path="/suppressiontournoi" element={<SuppressionTournoi />} />
             </Routes>
         </Router>
     );

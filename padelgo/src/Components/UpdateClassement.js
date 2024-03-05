@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import Navbar from './NavbarAdmin';
 import '../Style/UpdateClassement.css';
+import { useNavigate } from 'react-router-dom';
 
 
 function UpdateClassement() {
@@ -10,6 +11,7 @@ function UpdateClassement() {
   const [classementJoueur2, setClassementJoueur2] = useState('');
   const [message, setMessage] = useState('');
   const [erreur, setErreur] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -35,6 +37,9 @@ function UpdateClassement() {
       console.error(error);
     }
   };
+  const handleBackToAdmin = () => {
+        navigate('/accueiladmin');
+    };
 
   return (
     <>
@@ -64,6 +69,7 @@ function UpdateClassement() {
           />
           <button type="submit">Mettre à jour</button>
         </form>
+        <button className="back-to-admin-button" onClick={handleBackToAdmin}>Retour</button>
       </div>
     </>
   );

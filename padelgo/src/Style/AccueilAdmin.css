@@ -6,7 +6,7 @@
     flex-direction: column; 
 }
 
-.nouveau-tournoi-btn, .afficher-equipes-btn, .update-classement-btn {
+.nouveau-tournoi-btn, .afficher-equipes-btn, .update-classement-btn, .supprimer-tournoi-btn {
     background-color: #FF7B9C; 
     color: white;
     border: none;

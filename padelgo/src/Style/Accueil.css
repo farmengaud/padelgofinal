@@ -4,19 +4,55 @@
     height: 150px; /* Hauteur actuelle */
     margin: 120px auto; /* Augmentez la marge supérieure */
     border-radius: 15px;
-    background-image: url('../Images/fond2.jpg'); /* Remplacez par le chemin de votre image */
     background-size: cover; /* Assure que l'image couvre entièrement le rectangle */
     background-position: center; /* Centre l'image dans le rectangle */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
     position: relative;
 }
 .texte-sur-image {
-    position: absolute;
-    top: 20%; /* Centrer verticalement */
-    left: 30%; /* Centrer horizontalement */
-    transform: translate(-50%, 0%); /* Ajuster la position précise du texte */
+ position: absolute;
+    top: 50%; /* Centrer verticalement */
+    left: 50%; /* Centrer horizontalement */
+    transform: translate(-50%, -50%); /* Ajuster la position précise du texte pour le centrer parfaitement */
     color: #ff7b9c; /* ou toute autre couleur désirée */
     font-size: 30px; /* Taille de la police */
     text-align: center;
-    /* Ajoutez d'autres styles de texte si nécessaire */
 }
+
+.logout-button {
+ background-color: #FF7B9C; 
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    width: 80%; /* Vous pouvez ajuster la largeur selon vos besoins */
+    margin: 550px 0;
+    margin-left: 40px;
+}
+
+.logout-button:hover {
+   background-color: #e66a85;
+}
+.info-section {
+    margin-top: -70px;
+    padding: 20px;
+    max-width: 800px; /* Ajustez selon la largeur désirée */
+    background-color: #f9f9f9; /* Couleur de fond */
+    border-radius: 10px; /* Bords arrondis */
+}
+
+.info-section h2 {
+    color: #FF7B9C; /* Couleur du titre */
+    margin-bottom: 15px; /* Espace sous le titre */
+}
+
+.info-section p {
+    color: #333; /* Couleur du texte */
+    line-height: 1.6; /* Hauteur de ligne pour la lisibilité */
+}
+
+

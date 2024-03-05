@@ -76,17 +76,21 @@ public async Task<ActionResult<IEnumerable<TournoiDTOGet>>> GetAllTournois()
 [HttpDelete("{id}")]
 public async Task<IActionResult> DeleteTournoi(int id)
 {
-    var tournoi = await _context.Tournois.FindAsync(id);
+    var tournoi = await _context.Tournois.Include(t => t.Equipes).FirstOrDefaultAsync(t => t.TournoiId == id);
     if (tournoi == null)
     {
-        return NotFound();
+        return NotFound("Tournoi non trouvé.");
     }
+
+    // Supprimer toutes les équipes inscrites au tournoi
+    _context.Equipes.RemoveRange(tournoi.Equipes);
 
     _context.Tournois.Remove(tournoi);
     await _context.SaveChangesAsync();
 
-    return NoContent(); // Retourne une réponse 204 (No Content) si la suppression a réussi
+    return NoContent(); // HTTP 204 No Content
 }
+
 
 
 
@@ -124,5 +128,19 @@ public async Task<ActionResult<IEnumerable<Equipe>>> GetEquipesForTournoi(int to
 
     return tournoi.Equipes;
 }
+
+// GET: api/tournoi/{tournoiId}/nombreEquipes
+[HttpGet("{tournoiId}/nombreEquipes")]
+public async Task<ActionResult<int>> GetNombreEquipesPourTournoi(int tournoiId)
+{
+    var tournoi = await _context.Tournois.Include(t => t.Equipes).FirstOrDefaultAsync(t => t.TournoiId == tournoiId);
+    if (tournoi == null)
+    {
+        return NotFound("Tournoi non trouvé.");
+    }
+
+    return Ok(tournoi.Equipes.Count);
+}
+
     }
 }

@@ -52,7 +52,9 @@ function Creation() {
             console.error('Erreur lors de la création du tournoi:', error.response || error);
         }
     };
-
+const handleBackToAdmin = () => {
+        navigate('/accueiladmin');
+    };
     return (
         <div className="form-container">
             <Navbar />
@@ -88,6 +90,7 @@ function Creation() {
                 />
                 <button type="submit">Création du tournoi</button>
             </form>
+            <button className="back-to-admin-button" onClick={handleBackToAdmin}>Retour</button>
         </div>
     );
 }

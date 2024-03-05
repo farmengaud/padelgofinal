@@ -16,7 +16,11 @@ function AccueilAdmin() {
     };
 
     const handleNavigateToUpdateClassement = () => {
-        navigate('/updateclassement'); // Mettez ici le chemin correct vers votre page AfficherEquipesTournoi
+        navigate('/updateclassement'); // Mettez ici le chemin correct vers votre page de mise à jour de classement
+    };
+
+    const handleNavigateToSuppressionTournoi = () => {
+        navigate('/suppressiontournoi'); // Mettez ici le chemin correct vers votre page de suppression de tournoi
     };
 
     return (
@@ -31,6 +35,9 @@ function AccueilAdmin() {
                 </button>
                 <button className="update-classement-btn" onClick={handleNavigateToUpdateClassement}>
                     Modifier un classement 
+                </button>
+                <button className="supprimer-tournoi-btn" onClick={handleNavigateToSuppressionTournoi}>
+                    Supprimer un tournoi
                 </button>
             </div>
         </>
