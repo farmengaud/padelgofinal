@@ -35,6 +35,14 @@
     border-radius: 5px;
     text-align: center;
 }
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
 
 /* Styles supplémentaires pour Navbar et Tapbar si nécessaire */
 /* Assurez-vous que Navbar et Tapbar sont bien positionnés et ne chevauchent pas le contenu central */

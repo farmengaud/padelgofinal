@@ -141,6 +141,19 @@ public async Task<ActionResult<int>> GetNombreEquipesPourTournoi(int tournoiId)
 
     return Ok(tournoi.Equipes.Count);
 }
+[HttpGet("{id}/niveau")]
+public async Task<ActionResult<string>> GetNiveauTournoi(int id)
+{
+    var tournoi = await _context.Tournois.FindAsync(id);
 
+    if (tournoi == null)
+    {
+        return NotFound("Tournoi non trouvé.");
     }
+
+    return Ok(tournoi.Niveau);
+}
+
+
+    } 
 }
