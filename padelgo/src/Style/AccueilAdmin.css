@@ -16,8 +16,8 @@
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease;
-    width: 80%; /* Vous pouvez ajuster la largeur selon vos besoins */
-    margin: 10px 0; /* Ajouter une marge en haut et en bas pour espacer les boutons */
+    width: 80%; 
+    margin: 10px 0; 
 }
 .nouveau-tournoi-btn:hover {
     background-color: #e66a85; 

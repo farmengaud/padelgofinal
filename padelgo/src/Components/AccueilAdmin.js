@@ -2,25 +2,25 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from './NavbarAdmin';
 
-import '../Style/AccueilAdmin.css'; // Assurez-vous que le fichier CSS existe et contient le style pour le bouton
+import '../Style/AccueilAdmin.css'; 
 
 function AccueilAdmin() {
     const navigate = useNavigate();
 
     const handleNavigateToCreationTournoi = () => {
-        navigate('/creationtournoi'); // Mettez ici le chemin correct vers votre page de création de tournoi
+        navigate('/creationtournoi'); 
     };
 
     const handleNavigateToAfficherEquipesTournoi = () => {
-        navigate('/afficherequipestournoi'); // Mettez ici le chemin correct vers votre page AfficherEquipesTournoi
+        navigate('/afficherequipestournoi'); 
     };
 
     const handleNavigateToUpdateClassement = () => {
-        navigate('/updateclassement'); // Mettez ici le chemin correct vers votre page de mise à jour de classement
+        navigate('/updateclassement');
     };
 
     const handleNavigateToSuppressionTournoi = () => {
-        navigate('/suppressiontournoi'); // Mettez ici le chemin correct vers votre page de suppression de tournoi
+        navigate('/suppressiontournoi'); 
     };
 
     return (

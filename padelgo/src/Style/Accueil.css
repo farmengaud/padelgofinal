@@ -1,26 +1,24 @@
-/* Accueil.css */
 .rectangle {
-    width: 90%; /* Largeur actuelle */
-    height: 150px; /* Hauteur actuelle */
-    margin: 120px auto; /* Augmentez la marge supérieure */
+    width: 90%;
+    height: 150px;
+    margin: 120px auto;
     border-radius: 15px;
-    background-size: cover; /* Assure que l'image couvre entièrement le rectangle */
-    background-position: center; /* Centre l'image dans le rectangle */
-
+    background-size: cover;
+    background-position: center;
     position: relative;
 }
 .texte-sur-image {
- position: absolute;
-    top: 50%; /* Centrer verticalement */
-    left: 50%; /* Centrer horizontalement */
-    transform: translate(-50%, -50%); /* Ajuster la position précise du texte pour le centrer parfaitement */
-    color: #ff7b9c; /* ou toute autre couleur désirée */
-    font-size: 30px; /* Taille de la police */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ff7b9c;
+    font-size: 30px;
     text-align: center;
 }
 
 .logout-button {
- background-color: #FF7B9C; 
+    background-color: #FF7B9C; 
     color: white;
     border: none;
     border-radius: 10px;
@@ -29,30 +27,28 @@
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease;
-    width: 80%; /* Vous pouvez ajuster la largeur selon vos besoins */
+    width: 80%;
     margin: 550px 0;
     margin-left: 40px;
 }
 
 .logout-button:hover {
-   background-color: #e66a85;
+    background-color: #e66a85;
 }
 .info-section {
     margin-top: -70px;
     padding: 20px;
-    max-width: 800px; /* Ajustez selon la largeur désirée */
-    background-color: #f9f9f9; /* Couleur de fond */
-    border-radius: 10px; /* Bords arrondis */
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
 }
 
 .info-section h2 {
-    color: #FF7B9C; /* Couleur du titre */
-    margin-bottom: 15px; /* Espace sous le titre */
+    color: #FF7B9C;
+    margin-bottom: 15px;
 }
 
 .info-section p {
-    color: #333; /* Couleur du texte */
-    line-height: 1.6; /* Hauteur de ligne pour la lisibilité */
+    color: #333;
+    line-height: 1.6;
 }
-
-

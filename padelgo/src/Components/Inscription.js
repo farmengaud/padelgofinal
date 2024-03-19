@@ -11,12 +11,12 @@ function Inscription() {
     const [email, setEmail] = useState('');
     const [motDePasse, setMotDePasse] = useState('');
     const [classement, setClassement] = useState('');
-    const [error, setError] = useState(''); // Ajout d'un état pour gérer les erreurs
+    const [error, setError] = useState(''); 
 
     const navigate = useNavigate();
 
     const handleInscription = async () => {
-        setError(''); // Réinitialiser le message d'erreur
+        setError(''); 
 
         if (!nom || !prenom || !email || !motDePasse || !classement) {
             setError('Tous les champs sont obligatoires.');
@@ -38,7 +38,6 @@ function Inscription() {
                 Classement: classement,
             });
 
-            // Gestion de la réponse ici
             if (response.status === 200) {
                 navigate('/connexion');
             } else {
@@ -49,7 +48,6 @@ function Inscription() {
                 // Gestion spécifique de l'erreur "e-mail déjà utilisé"
                 setError('Cette adresse e-mail est déjà utilisée.');
             } else {
-                // Autres erreurs
                 setError('Une erreur est survenue lors de l\'inscription.');
             }
             console.error('Erreur lors de l\'inscription:', error.response || error);

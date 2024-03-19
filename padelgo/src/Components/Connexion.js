@@ -37,13 +37,11 @@ function Connexion() {
             });
 
             if (response.status === 200 && response.data) {
-                // Ici, nous supposons que l'API retourne un objet avec les clés 'nom' et 'prenom'
-                // Assurez-vous que ces clés correspondent à la réponse de votre API
+
                 localStorage.setItem('nom', response.data.nom);
                 localStorage.setItem('prenom', response.data.prenom);
-                localStorage.setItem('email', response.data.email); // ou utilisez 'email' si l'API ne retourne pas l'email
+                localStorage.setItem('email', response.data.email); 
 
-                // Vérifiez si l'email correspond à l'admin
                 if (email === 'clubadour@gmail.com') {
                     navigate('/accueiladmin');  
                 } else {

@@ -1,4 +1,3 @@
-/* Styles globaux */
 .all {
     height: 100%;
     margin: 0;
@@ -9,30 +8,27 @@
     background-color: #fdfff9;
 }
 
-/* Styles du conteneur du formulaire */
 .form-containerr {
-    width: 90%; /* Adapter à la largeur souhaitée */
-    max-width: 400px; /* Limiter la largeur maximale */
-    margin: auto; /* Centrage horizontal */
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
     padding: 2rem;
     text-align: center;
-    display: flex; /* Utiliser Flexbox */
-    flex-direction: column; /* Organiser les enfants verticalement */
+    display: flex;
+    flex-direction: column;
     margin-top: 100px;
-    gap: 20px; /* Espacer les éléments verticalement */
-    box-sizing: border-box; /* Inclure padding dans la largeur */
-    background: #ffffff; /* Fond blanc */
-    border-radius: 15px; /* Coins arrondis */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    gap: 20px;
+    box-sizing: border-box;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Styles des titres */
 .form-containerr h2 {
     color: #FF7B9C;
     margin-bottom: 1.5rem;
 }
 
-/* Styles des champs de saisie */
 .form-containerr input {
     width: 100%;
     padding: 0.5rem;
@@ -41,7 +37,6 @@
     border-radius: 10px;
 }
 
-/* Styles des boutons */
 .form-containerr button {
     padding: 0.5rem;
     border: none;
@@ -50,7 +45,7 @@
     color: #fdfff9;
     font-size: 1rem;
     cursor: pointer;
-    margin-top: 20px; /* Espacer les boutons */
+    margin-top: 20px;
 }
 
 .form-containerr button:hover {
@@ -62,36 +57,26 @@
     opacity: 0.8;
 }
 
-/* Styles du message de succès */
 .success-message {
     color: green;
-   
 }
 
-/* Styles du message d'erreur */
 .error-message {
     color: red;
     background-color: #fff3f3;
     border: 1px solid red;
     padding: 10px;
-    
     border-radius: 5px;
     text-align: center;
 }
 
-
 .footerr {
     position: fixed;
     width: 100%;
-    /*background-color: #33339f; */
-    color: black; /* Couleur du texte */
+    color: black;
     text-align: center;
-    padding: 10px; /* Ajustez selon vos besoins */
-    font-size: 14px; /* Taille du texte */
+    padding: 10px;
+    font-size: 14px;
     margin-top: 800px;
     margin-bottom: 10px;
 }
-
-
-
-

@@ -1,55 +1,55 @@
-/* Tournoi.css */
+
 .tournois-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Réduction de la largeur minimale des cartes */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
     gap: 20px;
     padding: 20px;
     justify-content: center;
-    align-items: start; /* Alignement au début pour éviter l'étirement des cartes */
+    align-items: start; 
     overflow-x: auto;
     padding-top: 120px;
     padding-bottom: 120px;
 }
 
 .tournoi-card {
-    background-color: #ffffff; /* Fond blanc */
-    border-radius: 15px; /* Coins arrondis plus prononcés */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre plus douce */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transition douce pour survol */
-    cursor: pointer; /* Indicateur de clic */
-    overflow: hidden; /* Pour les images ou tout contenu débordant */
+    background-color: #ffffff; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+    cursor: pointer; 
+    overflow: hidden; 
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centrer le contenu verticalement */
-    align-items: center; /* Centrer le contenu horizontalement */
-    aspect-ratio: 1.5; /* Garde le ratio carré */
-    padding: 15px; /* Espace autour du contenu de la carte */
+    justify-content: center;
+    align-items: center; 
+    aspect-ratio: 1.5;
+    padding: 15px; 
 }
 
 .tournoi-card:hover {
-    transform: translateY(-5px); /* Légère élévation au survol */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
 }
 
 .tournoi-info {
-    text-align: center; /* Centrer le texte horizontalement */
-    width: 100%; /* Assure que le contenu prenne toute la largeur de la carte */
+    text-align: center;
+    width: 100%; 
 }
 
 .tournoi-info h3 {
-    font-size: 1.5rem; /* Ajuster la taille de police si nécessaire */
+    font-size: 1.5rem; 
     margin: 10px 0;
-    color: #FF7B9C; /* Rose Pompadour de votre palette */
+    color: #FF7B9C; 
 }
 
 .tournoi-info p, .tournoi-info h2 {
-    font-size: 1rem; /* Ajuster la taille de police si nécessaire */
-    color: #537A5A; /* Vert fougère de votre palette */
-    margin: 5px 0; /* Ajuster l'espace autour des p et h2 */
+    font-size: 1rem; 
+    color: #537A5A; 
+    margin: 5px 0; 
 }
 
 @media (max-width: 600px) {
     .tournois-container {
-        grid-template-columns: 1fr; /* Une seule colonne pour les petits écrans */
+        grid-template-columns: 1fr; 
     }
 }

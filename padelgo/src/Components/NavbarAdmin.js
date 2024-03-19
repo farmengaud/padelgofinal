@@ -1,7 +1,7 @@
-// Navbar.js
+
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import '../Style/Navbar.css'; // Assurez-vous que le chemin d'accès est correct
+import '../Style/Navbar.css'; 
 import logoConnexion from '../Images/LOGO2.png';
 import marque from '../Images/PadelGo1.png';
 

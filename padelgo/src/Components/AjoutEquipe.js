@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Navbar from './Navbar';
 import Tapbar from './Tapbar';
-import '../Style/AjoutEquipe.css'; // Assurez-vous d'avoir les styles nécessaires pour votre formulaire
+import '../Style/AjoutEquipe.css'; 
 
 function Insc() {
     const [nomJoueur1, setNomJoueur1] = useState('');
@@ -46,7 +46,7 @@ function Insc() {
             if (response.status === 201) {
                 setMessage(`Vous êtes l'équipe numéro ${response.data.equipeId}`);
             } else {
-                // Gérer d'autres réponses du serveur
+                
             }
         } catch (error) {
             setErreur('Une erreur est survenue lors de la création de l\'équipe.');
