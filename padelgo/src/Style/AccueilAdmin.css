@@ -20,5 +20,5 @@
     margin: 10px 0; /* Ajouter une marge en haut et en bas pour espacer les boutons */
 }
 .nouveau-tournoi-btn:hover {
-    background-color: #e66a85; /* Une teinte plus foncée pour l'effet au survol */
+    background-color: #e66a85; 
 }
