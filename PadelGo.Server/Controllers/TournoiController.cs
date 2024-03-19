@@ -88,7 +88,7 @@ public async Task<IActionResult> DeleteTournoi(int id)
     _context.Tournois.Remove(tournoi);
     await _context.SaveChangesAsync();
 
-    return NoContent(); // HTTP 204 No Content
+    return NoContent(); 
 }
 
 

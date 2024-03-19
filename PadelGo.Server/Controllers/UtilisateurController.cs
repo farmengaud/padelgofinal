@@ -37,7 +37,7 @@ public IActionResult PostUtilisateur([FromBody] UtilisateurinscriptionDTOpost ut
         return BadRequest("Erreur : il faut remplir les informations du nouvel utilisateur.");
     }
 
-    // Vérifiez si l'e-mail est déjà utilisé
+    // Vérifie si l'e-mail est déjà utilisé
 var utilisateurExistant = _context.Utilisateurs.FirstOrDefault(u => u.Mail == utilisateurDTO.Mail);
 if (utilisateurExistant != null)
 {
@@ -52,7 +52,7 @@ if (utilisateurExistant != null)
         Nom = utilisateurDTO.Nom,
         Prenom = utilisateurDTO.Prenom,
         Mail = utilisateurDTO.Mail,
-        MotDePasse = motDePasseHaché, // Utilisez le mot de passe haché
+        MotDePasse = motDePasseHaché, // Utilise le mot de passe haché
         Classement = utilisateurDTO.Classement
 
     };
@@ -64,7 +64,6 @@ if (utilisateurExistant != null)
     }
     catch (Exception ex)
     {
-        // Gérer les exceptions possibles comme les erreurs de base de données ici
         return StatusCode(500, "Une erreur interne est survenue.");
     }
 
@@ -91,14 +90,13 @@ public IActionResult PostConnexion([FromBody] UtilisateurconnexionDTOpost utilis
         {
             Nom = utilisateur.Nom,
             Prenom = utilisateur.Prenom,
-            Email = utilisateur.Mail // Assurez-vous que c'est le bon champ pour l'email dans votre base de données
+            Email = utilisateur.Mail 
         };
 
-        return Ok(userInfo); // Retourne les informations de l'utilisateur
+        return Ok(userInfo); 
     }
     else
     {
-        // Si l'authentification échoue, retourner une erreur générique
         return Unauthorized("L’e-mail ou le mot de passe ne correspond pas.");
     }
 }
@@ -144,7 +142,6 @@ public IActionResult UpdateClassement([FromBody] UtilisateurDTOput utilisateurDT
         return NotFound("Utilisateur non trouvé.");
     }
 
-    // Supposons que vous ayez validé que le classement est un entier positif, etc.
     utilisateur.Classement = utilisateurDTO.Classement;
 
     try
@@ -155,7 +152,6 @@ public IActionResult UpdateClassement([FromBody] UtilisateurDTOput utilisateurDT
     }
     catch (Exception ex)
     {
-        // Log l'exception ici
         return StatusCode(500, "Une erreur interne est survenue lors de la mise à jour du classement.");
     }
 }
