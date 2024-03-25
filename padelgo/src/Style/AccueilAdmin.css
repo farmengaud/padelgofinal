@@ -1,13 +1,15 @@
 .accueil-admin-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: calc(100vh - 50px);
-    flex-direction: column; 
+    justify-content: start;
+    padding-top: 250px; /* Ajustez ceci en fonction de la barre de navigation */
+    height: 100vh;
+    overflow-y: auto; /* Permettre le défilement si les boutons dépassent la hauteur de la page */
 }
 
-.nouveau-tournoi-btn, .afficher-equipes-btn, .update-classement-btn, .supprimer-tournoi-btn {
-    background-color: #FF7B9C; 
+.accueil-admin-container button {
+    background-color: #FF7B9C;
     color: white;
     border: none;
     border-radius: 10px;
@@ -16,9 +18,12 @@
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease;
-    width: 80%; 
-    margin: 10px 0; 
+    width: 80%; /* Ajustez la largeur si nécessaire */
+    margin: 10px 0; /* Espacement entre les boutons */
 }
-.nouveau-tournoi-btn:hover {
-    background-color: #e66a85; 
+
+.accueil-admin-container button:hover {
+    background-color: #e66a85;
 }
+
+

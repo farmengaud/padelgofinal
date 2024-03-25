@@ -33,7 +33,6 @@ public async Task<ActionResult<Equipe>> PostEquipe([FromBody] EquipeDTOpost equi
         NomJoueur2 = equipeDTO.NomJoueur2,
         ClassementJoueur2 = equipeDTO.ClassementJoueur2,
         MailJoueur2 = equipeDTO.MailJoueur2,
-        // Ne pas définir EquipeId ici car il sera généré par la base de données
     };
 
     _context.Equipes.Add(equipe);
@@ -73,17 +72,14 @@ public async Task<IActionResult> UpdateClassementEquipe(int id, [FromBody] Equip
     {
         await _context.SaveChangesAsync();
     }
-    catch (Exception ex) // Vous pouvez affiner le type d'exception si nécessaire
+    catch (Exception ex) 
     {
-        // Log the exception here using your logging strategy
         return StatusCode(500, "Une erreur interne est survenue lors de la mise à jour des classements.");
     }
 
-    return NoContent(); // HTTP 204
+    return NoContent(); 
 }
 
 
-
-        // Ajoutez d'autres méthodes ici au besoin
     }
 }

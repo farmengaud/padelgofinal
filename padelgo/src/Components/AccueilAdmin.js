@@ -1,8 +1,8 @@
+// accueil administrateur
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from './NavbarAdmin';
-
-import '../Style/AccueilAdmin.css'; 
+import '../Style/AccueilAdmin.css'; // Assurez-vous que le fichier CSS existe et contient le style approprié
 
 function AccueilAdmin() {
     const navigate = useNavigate();
@@ -23,6 +23,15 @@ function AccueilAdmin() {
         navigate('/suppressiontournoi'); 
     };
 
+    const handleLogout = () => {
+        if (window.confirm("Êtes-vous sûr de vouloir vous déconnecter ?")) {
+            localStorage.removeItem('nom');
+            localStorage.removeItem('prenom');
+            localStorage.removeItem('email');
+            navigate('/connexion');
+        }
+    };
+
     return (
         <>
             <Navbar />
@@ -39,6 +48,7 @@ function AccueilAdmin() {
                 <button className="supprimer-tournoi-btn" onClick={handleNavigateToSuppressionTournoi}>
                     Supprimer un tournoi
                 </button>
+                <button onClick={handleLogout} className="logout-button2">Se déconnecter</button> {/* Bouton de déconnexion ajouté */}
             </div>
         </>
     );

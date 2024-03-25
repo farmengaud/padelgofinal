@@ -1,3 +1,4 @@
+// mettre à jour un tournoi 
 import React, { useState } from 'react';
 import axios from 'axios';
 import Navbar from './NavbarAdmin';

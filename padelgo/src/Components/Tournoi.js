@@ -1,3 +1,4 @@
+// consultation des tournois 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../Style/Tournoi.css';
